@@ -1,0 +1,12 @@
+{block title}Úvodní stránka{/block}
+
+{block content}
+    <h1>{include #title}</h1>
+    {foreach $projects as $project}
+        {$project->id}
+        {$project->name}
+        {$project->description|noescape}
+        {$project->school->name}
+        <a n:href="Project:detail $project->id">Detail</a>
+    {/foreach}
+{/block}

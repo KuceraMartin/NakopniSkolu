@@ -6,7 +6,7 @@ use Nette;
 use App\Model\ProjectsRepository;
 
 
-class HomepagePresenter extends BasePresenter
+class ProjectPresenter extends BasePresenter
 {
 
     /**
@@ -15,8 +15,11 @@ class HomepagePresenter extends BasePresenter
      */
     public $projects;
 
-    public function renderDefault()
+    /**
+     * @param $id
+     */
+    public function renderDetail($id)
     {
-        $this->template->projects = $this->projects->findAll();
+        $this->template->project = $this->projects->getById($id);
     }
 }
