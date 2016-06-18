@@ -1,0 +1,8 @@
+{block title}{$project->name}{/block}
+
+{block content}
+    <h1>{include #title}</h1>
+    {$project->name}
+    {$project->description|noescape}
+    {$project->school->name}
+{/block}
