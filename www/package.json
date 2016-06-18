@@ -1,0 +1,38 @@
+{
+  "name": "nakopniskolu.cz",
+  "version": "1.0.0",
+  "description": "Projekt Nakopni školu, WhatTheHack 2016",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KuceraMartin/NakopniSkolu.git"
+  },
+  "keywords": [
+    "education",
+    "funding",
+    "hackathon",
+    "crowdfunding"
+  ],
+  "author": "Team Nakopni školu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KuceraMartin/NakopniSkolu/issues"
+  },
+  "homepage": "https://github.com/KuceraMartin/NakopniSkolu#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-minify": "0.0.12",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^3.0.0"
+  }
+}
