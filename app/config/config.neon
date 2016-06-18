@@ -24,6 +24,8 @@ services:
 	router: App\RouterFactory::createRouter
 	authenticator: App\Services\Authenticator
 
+	- App\FrontModule\Forms\SubscriptionFormFactory
+
 
 extensions:
 	kdyby.console: Kdyby\Console\DI\ConsoleExtension
