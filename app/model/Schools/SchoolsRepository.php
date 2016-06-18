@@ -3,6 +3,9 @@
 namespace App\Model;
 
 
+/**
+ * @method School getBy(array $conds)
+ */
 class SchoolsRepository extends Repository
 {
 
