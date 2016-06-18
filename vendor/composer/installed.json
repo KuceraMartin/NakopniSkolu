@@ -1452,5 +1452,120 @@
             "kdyby",
             "nette"
         ]
+    },
+    {
+        "name": "nette/tokenizer",
+        "version": "v2.2.2",
+        "version_normalized": "2.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nette/tokenizer.git",
+            "reference": "2ed42cc6c61317c847c2bfb96ae7a865dc88c331"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nette/tokenizer/zipball/2ed42cc6c61317c847c2bfb96ae7a865dc88c331",
+            "reference": "2ed42cc6c61317c847c2bfb96ae7a865dc88c331",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.1"
+        },
+        "conflict": {
+            "nette/nette": "<2.2"
+        },
+        "require-dev": {
+            "nette/tester": "~2.0",
+            "tracy/tracy": "^2.3"
+        },
+        "time": "2016-05-17 15:51:27",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause",
+            "GPL-2.0",
+            "GPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "David Grudl",
+                "homepage": "https://davidgrudl.com"
+            },
+            {
+                "name": "Nette Community",
+                "homepage": "https://nette.org/contributors"
+            }
+        ],
+        "description": "Nette Tokenizer",
+        "homepage": "https://nette.org"
+    },
+    {
+        "name": "nextras/orm",
+        "version": "v2.0.2",
+        "version_normalized": "2.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nextras/orm.git",
+            "reference": "152edd59b48740d8531c745830b331817674971b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nextras/orm/zipball/152edd59b48740d8531c745830b331817674971b",
+            "reference": "152edd59b48740d8531c745830b331817674971b",
+            "shasum": ""
+        },
+        "require": {
+            "nette/caching": "~2.2",
+            "nette/reflection": "~2.2",
+            "nette/tokenizer": "~2.2",
+            "nette/utils": "~2.2",
+            "nextras/dbal": "~2.0",
+            "php": ">=5.5"
+        },
+        "require-dev": {
+            "mockery/mockery": "~0.9",
+            "nette/bootstrap": "~2.3",
+            "nette/tester": "~1.4",
+            "tracy/tracy": "~2.3"
+        },
+        "time": "2016-03-13 08:47:43",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Nextras\\Orm\\": "src/"
+            },
+            "classmap": [
+                "src/exceptions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nextras Project",
+                "homepage": "https://github.com/nextras/orm/graphs/contributors"
+            }
+        ],
+        "description": "Nextras Orm framework",
+        "homepage": "https://github.com/nextras/orm",
+        "keywords": [
+            "database",
+            "nextras",
+            "orm"
+        ]
     }
 ]

@@ -20,6 +20,7 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
         ),
         'N' => 
         array (
+            'Nextras\\Orm\\' => 12,
             'Nextras\\Migrations\\' => 19,
             'Nextras\\Dbal\\' => 13,
         ),
@@ -33,6 +34,10 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Nextras\\Orm\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nextras/orm/src',
         ),
         'Nextras\\Migrations\\' => 
         array (
@@ -362,6 +367,9 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
         'Nette\\Utils\\RecursiveCallbackFilterIterator' => __DIR__ . '/..' . '/nette/finder/src/Finder/RecursiveCallbackFilterIterator.php',
         'Nette\\Utils\\RegexpException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
         'Nette\\Utils\\Strings' => __DIR__ . '/..' . '/nette/utils/src/Utils/Strings.php',
+        'Nette\\Utils\\TokenIterator' => __DIR__ . '/..' . '/nette/tokenizer/src/Tokenizer/TokenIterator.php',
+        'Nette\\Utils\\Tokenizer' => __DIR__ . '/..' . '/nette/tokenizer/src/Tokenizer/Tokenizer.php',
+        'Nette\\Utils\\TokenizerException' => __DIR__ . '/..' . '/nette/tokenizer/src/Tokenizer/TokenizerException.php',
         'Nette\\Utils\\UnknownImageFileException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
         'Nette\\Utils\\Validators' => __DIR__ . '/..' . '/nette/utils/src/Utils/Validators.php',
         'Nextras\\Dbal\\ConnectionException' => __DIR__ . '/..' . '/nextras/dbal/src/exceptions.php',
@@ -387,6 +395,16 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
         'Nextras\\Migrations\\LockException' => __DIR__ . '/..' . '/nextras/migrations/src/exceptions.php',
         'Nextras\\Migrations\\LogicException' => __DIR__ . '/..' . '/nextras/migrations/src/exceptions.php',
         'Nextras\\Migrations\\RuntimeException' => __DIR__ . '/..' . '/nextras/migrations/src/exceptions.php',
+        'Nextras\\Orm\\IOException' => __DIR__ . '/..' . '/nextras/orm/src/exceptions.php',
+        'Nextras\\Orm\\InvalidArgumentException' => __DIR__ . '/..' . '/nextras/orm/src/exceptions.php',
+        'Nextras\\Orm\\InvalidModifierDefinitionException' => __DIR__ . '/..' . '/nextras/orm/src/exceptions.php',
+        'Nextras\\Orm\\InvalidStateException' => __DIR__ . '/..' . '/nextras/orm/src/exceptions.php',
+        'Nextras\\Orm\\LogicException' => __DIR__ . '/..' . '/nextras/orm/src/exceptions.php',
+        'Nextras\\Orm\\MemberAccessException' => __DIR__ . '/..' . '/nextras/orm/src/exceptions.php',
+        'Nextras\\Orm\\NotImplementedException' => __DIR__ . '/..' . '/nextras/orm/src/exceptions.php',
+        'Nextras\\Orm\\NotSupportedException' => __DIR__ . '/..' . '/nextras/orm/src/exceptions.php',
+        'Nextras\\Orm\\NullValueException' => __DIR__ . '/..' . '/nextras/orm/src/exceptions.php',
+        'Nextras\\Orm\\RuntimeException' => __DIR__ . '/..' . '/nextras/orm/src/exceptions.php',
         'Tester\\Assert' => __DIR__ . '/..' . '/nette/tester/src/Framework/Assert.php',
         'Tester\\AssertException' => __DIR__ . '/..' . '/nette/tester/src/Framework/AssertException.php',
         'Tester\\CodeCoverage\\Collector' => __DIR__ . '/..' . '/nette/tester/src/CodeCoverage/Collector.php',
