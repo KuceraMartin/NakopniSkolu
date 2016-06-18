@@ -9,9 +9,58 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
     public static $files = array (
         '7745382c92b7799bf1294b1f43023ba2' => __DIR__ . '/..' . '/tracy/tracy/src/shortcuts.php',
         'a1d067aa2e53d6b47171c03cfc0ea5be' => __DIR__ . '/..' . '/nette/safe-stream/src/loader.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+    );
+
+    public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\Console\\' => 26,
+        ),
+        'N' => 
+        array (
+            'Nextras\\Migrations\\' => 19,
+            'Nextras\\Dbal\\' => 13,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\Console\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Nextras\\Migrations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nextras/migrations/src',
+        ),
+        'Nextras\\Dbal\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nextras/dbal/src',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'K' => 
+        array (
+            'Kdyby\\Console\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/kdyby/console/src',
+            ),
+        ),
     );
 
     public static $classMap = array (
+        'KdybyModule\\CliPresenter' => __DIR__ . '/..' . '/kdyby/console/src/Kdyby/Console/CliPresenter.php',
+        'Kdyby\\Console\\Exception' => __DIR__ . '/..' . '/kdyby/console/src/Kdyby/Console/exceptions.php',
+        'Kdyby\\Console\\InvalidApplicationModeException' => __DIR__ . '/..' . '/kdyby/console/src/Kdyby/Console/exceptions.php',
+        'Kdyby\\Console\\InvalidArgumentException' => __DIR__ . '/..' . '/kdyby/console/src/Kdyby/Console/exceptions.php',
+        'Kdyby\\Console\\InvalidStateException' => __DIR__ . '/..' . '/kdyby/console/src/Kdyby/Console/exceptions.php',
+        'Kdyby\\Console\\UnknownCommandException' => __DIR__ . '/..' . '/kdyby/console/src/Kdyby/Console/exceptions.php',
         'Latte\\CompileException' => __DIR__ . '/..' . '/latte/latte/src/Latte/exceptions.php',
         'Latte\\Compiler' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler.php',
         'Latte\\Engine' => __DIR__ . '/..' . '/latte/latte/src/Latte/Engine.php',
@@ -315,6 +364,29 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
         'Nette\\Utils\\Strings' => __DIR__ . '/..' . '/nette/utils/src/Utils/Strings.php',
         'Nette\\Utils\\UnknownImageFileException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
         'Nette\\Utils\\Validators' => __DIR__ . '/..' . '/nette/utils/src/Utils/Validators.php',
+        'Nextras\\Dbal\\ConnectionException' => __DIR__ . '/..' . '/nextras/dbal/src/exceptions.php',
+        'Nextras\\Dbal\\ConstraintViolationException' => __DIR__ . '/..' . '/nextras/dbal/src/exceptions.php',
+        'Nextras\\Dbal\\DriverException' => __DIR__ . '/..' . '/nextras/dbal/src/exceptions.php',
+        'Nextras\\Dbal\\ForeignKeyConstraintViolationException' => __DIR__ . '/..' . '/nextras/dbal/src/exceptions.php',
+        'Nextras\\Dbal\\IOException' => __DIR__ . '/..' . '/nextras/dbal/src/exceptions.php',
+        'Nextras\\Dbal\\InvalidArgumentException' => __DIR__ . '/..' . '/nextras/dbal/src/exceptions.php',
+        'Nextras\\Dbal\\InvalidStateException' => __DIR__ . '/..' . '/nextras/dbal/src/exceptions.php',
+        'Nextras\\Dbal\\NotImplementedException' => __DIR__ . '/..' . '/nextras/dbal/src/exceptions.php',
+        'Nextras\\Dbal\\NotNullConstraintViolationException' => __DIR__ . '/..' . '/nextras/dbal/src/exceptions.php',
+        'Nextras\\Dbal\\NotSupportedException' => __DIR__ . '/..' . '/nextras/dbal/src/exceptions.php',
+        'Nextras\\Dbal\\QueryException' => __DIR__ . '/..' . '/nextras/dbal/src/exceptions.php',
+        'Nextras\\Dbal\\UniqueConstraintViolationException' => __DIR__ . '/..' . '/nextras/dbal/src/exceptions.php',
+        'Nextras\\Migrations\\Drivers\\MySqlNetteDbDriver' => __DIR__ . '/..' . '/nextras/migrations/src/deprecated/MySqlNetteDbDriver.php',
+        'Nextras\\Migrations\\Drivers\\PgSqlNetteDbDriver' => __DIR__ . '/..' . '/nextras/migrations/src/deprecated/PgSqlNetteDbDriver.php',
+        'Nextras\\Migrations\\Exception' => __DIR__ . '/..' . '/nextras/migrations/src/exceptions.php',
+        'Nextras\\Migrations\\ExecutionException' => __DIR__ . '/..' . '/nextras/migrations/src/exceptions.php',
+        'Nextras\\Migrations\\Extensions\\DbPhp' => __DIR__ . '/..' . '/nextras/migrations/src/deprecated/DbPhp.php',
+        'Nextras\\Migrations\\Extensions\\NetteDbSql' => __DIR__ . '/..' . '/nextras/migrations/src/deprecated/NetteDbSql.php',
+        'Nextras\\Migrations\\Extensions\\SimplePhp' => __DIR__ . '/..' . '/nextras/migrations/src/deprecated/SimplePhp.php',
+        'Nextras\\Migrations\\IOException' => __DIR__ . '/..' . '/nextras/migrations/src/exceptions.php',
+        'Nextras\\Migrations\\LockException' => __DIR__ . '/..' . '/nextras/migrations/src/exceptions.php',
+        'Nextras\\Migrations\\LogicException' => __DIR__ . '/..' . '/nextras/migrations/src/exceptions.php',
+        'Nextras\\Migrations\\RuntimeException' => __DIR__ . '/..' . '/nextras/migrations/src/exceptions.php',
         'Tester\\Assert' => __DIR__ . '/..' . '/nette/tester/src/Framework/Assert.php',
         'Tester\\AssertException' => __DIR__ . '/..' . '/nette/tester/src/Framework/AssertException.php',
         'Tester\\CodeCoverage\\Collector' => __DIR__ . '/..' . '/nette/tester/src/CodeCoverage/Collector.php',
@@ -362,6 +434,9 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit091ed5d24b4127ffc48411e34be2086f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit091ed5d24b4127ffc48411e34be2086f::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit091ed5d24b4127ffc48411e34be2086f::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit091ed5d24b4127ffc48411e34be2086f::$classMap;
 
         }, null, ClassLoader::class);

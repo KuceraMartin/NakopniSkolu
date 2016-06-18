@@ -1,4 +1,7 @@
 parameters:
-
+    dbal:
+        username:
+        password:
+        dbname:
 
 
