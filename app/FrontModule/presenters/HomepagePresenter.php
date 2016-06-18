@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Presenters;
+namespace App\FrontModule\Presenters;
 
 use Nette;
 
 
 class HomepagePresenter extends Nette\Application\UI\Presenter
 {
+
 }
