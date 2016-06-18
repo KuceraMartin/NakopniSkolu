@@ -2,10 +2,12 @@
 # https://nette.org/security-warning
 
 parameters:
+	dbal:
+		driver: mysqli
+		connectionTz: '+01:00'
 
-
-php:
-	date.timezone: Europe/Prague
+#php:
+#	date.timezone: UTC
 
 
 application:
@@ -20,3 +22,18 @@ session:
 
 services:
 	router: App\RouterFactory::createRouter
+
+
+extensions:
+    kdyby.console: Kdyby\Console\DI\ConsoleExtension
+    nextras.migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
+    nextras.dbal: Nextras\Dbal\Bridges\NetteDI\DbalExtension
+
+
+nextras.migrations:
+    dir: %appDir%/../migrations
+    driver: mysql
+    dbal: nextras
+
+
+nextras.dbal: %dbal%
