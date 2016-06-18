@@ -28,6 +28,7 @@ extensions:
 	kdyby.console: Kdyby\Console\DI\ConsoleExtension
 	nextras.migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
 	nextras.dbal: Nextras\Dbal\Bridges\NetteDI\DbalExtension
+	nextras.orm: Nextras\Orm\Bridges\NetteDI\OrmExtension
 
 
 nextras.migrations:
