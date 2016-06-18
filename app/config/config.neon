@@ -25,15 +25,15 @@ services:
 
 
 extensions:
-    kdyby.console: Kdyby\Console\DI\ConsoleExtension
-    nextras.migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
-    nextras.dbal: Nextras\Dbal\Bridges\NetteDI\DbalExtension
+	kdyby.console: Kdyby\Console\DI\ConsoleExtension
+	nextras.migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
+	nextras.dbal: Nextras\Dbal\Bridges\NetteDI\DbalExtension
 
 
 nextras.migrations:
-    dir: %appDir%/../migrations
-    driver: mysql
-    dbal: nextras
+	dir: %appDir%/../migrations
+	driver: mysql
+	dbal: nextras
 
 
 nextras.dbal: %dbal%
