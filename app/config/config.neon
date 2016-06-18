@@ -38,3 +38,6 @@ nextras.migrations:
 
 
 nextras.dbal: %dbal%
+
+nextras.orm:
+	model: App\Model\RepositoryContainer
