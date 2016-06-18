@@ -118,8 +118,6 @@ class Runner
             $this->printer->printDone();
 
         } catch (Exception $e) {
-            var_dump($e->getMessage());
-            exit();
             $this->driver->unlock();
             $this->printer->printError($e);
         }
