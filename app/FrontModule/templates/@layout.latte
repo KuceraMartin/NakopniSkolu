@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
 
-	<title>{ifset #title}{include #title} - {/ifset}Nakopni školu</title>
+    <title>{ifset #title}{include #title} - {/ifset}Nakopni školu</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="{$basePath}/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{$basePath}/node_modules/bootstrap/dist/css/bootstrap.min.css.map">
+    {*<link rel="stylesheet" href="{$basePath}/node_modules/font-awesome/font-awesome.min.css">*}
+    <link rel="stylesheet" href="{$basePath}/css/app.min.css">
 </head>
 
 <body>
-	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
 
-	{include content}
+<div class="container-fluid">
+
+    <!-- Navbar -->
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav pull-right">
+                <li>
+                    <a href="#">O projektu</a>
+                </li>
+                <li>
+                    <a href="#">Pro školy</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    {include content}
+
+    <footer>
+        <div class="col-sm-12 text-center">
+            <span>Lorem ipsum dolor.</span>
+            <a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
+            <span>Lorem ipsum.</span>
+        </div>
+    </footer>
+</div>
 
 	{control subscriptionForm}
 
-	{block scripts}
-	<script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
-	{/block}
+<!-- Scripts -->
+{block scripts}
+    <script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
+    <script src="{$basePath}/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="{$basePath}/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+{/block}
 </body>
 </html>
