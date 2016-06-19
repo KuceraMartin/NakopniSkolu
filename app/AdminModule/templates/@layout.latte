@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
 
-	<title>Nakopni školu</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>{ifset #title}{include #title} - {/ifset}Nakopni školu</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="{$basePath}/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{$basePath}/node_modules/bootstrap/dist/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="{$basePath}/css/app.min.css">
 </head>
 
 <body>
-	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+
+<div class="container-fluid">
+
+    <!-- Navbar -->
+    {if $presenter->getName() != 'Admin:Sign'}
+        <div class="row">
+            <nav class="navbar navbar-default">
+                <div class="navbar-brand"><a n:href=":Front:Homepage:default">Nakopni školu</a></div>
+                <ul class="nav navbar-nav pull-right">
+                    <li>
+                        <button class="btn btn-primary"><i class="fa fa-plus"></i>Nový projekt</button>
+                    </li>
+                    <li>
+                        <a href="#">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    {/if}
 
 	{if $user->isLoggedIn()}
 	<a n:href="Dashboard:">Seznam projektů</a>
@@ -16,10 +41,25 @@
 	<a n:href="Sign:out">Odhlásit</a>
 	{/if}
 
-	{include content}
 
-	{block scripts}
-	<script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
-	{/block}
+    {include content}
+
+    <footer class="navbar-fixed-bottom">
+        <div class="col-sm-12 text-center">
+            <span>Lorem ipsum dolor.</span>
+            <a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
+            <span>Lorem ipsum.</span>
+        </div>
+    </footer>
+</div>
+
+<!-- Scripts -->
+{block scripts}
+    <script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
+    <script src="{$basePath}/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="{$basePath}/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+{/block}
+
 </body>
+
 </html>
