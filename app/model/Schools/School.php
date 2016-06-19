@@ -8,7 +8,7 @@ use Nextras\Orm\Relationships\OneHasMany;
 /**
  * @property string                 $name
  * @property string                 $email
- * @property string                 $password
+ * @property string|NULL            $password
  * @property string                 $phone
  * @property string                 $website
  * @property string                 $address

@@ -5,4 +5,5 @@ parameters:
 		dbname:
 
 	senderEmail: 'Nakopni Školu <info@nakopniskolu.cz>'
+	registrationEmail: 'some@emailthatyoucheck.frequently'
 
