@@ -1,37 +1,67 @@
 {block title}Úvodní stránka{/block}
 
-{*{block content}
-    <h1>{include #title}</h1>
-    {foreach $projects as $project}
-        {$project->id}
-        {$project->name}
-        {$project->description|noescape}
-        {$project->school->name}
-        <a n:href="Project:detail $project->id">Detail</a>
-    {/foreach}
-{/block}*}
-
-<!-- removed, shall be -->
-<!DOCTYPE html>
-
 {block content}
 
-<!-- Navbar -->
-<div class="row">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">Nakopni školu</a>
-            <button class="btn btn-success pull-right">Pro školy</button>
-        </div>
-    </nav>
-</div>
+<h1>{include #title}</h1>
+
+{foreach $projects as $project}
+    {$project->id}
+    {$project->name}
+    {$project->description|noescape}
+    {$project->school->name}
+    <a n:href="Project:detail $project->id">Detail</a>
+{/foreach}
+
+
 <div class="row">
     <div class="col-sm-12">
-        <section>
+        <section class="jumbotron">
             <div class="row text-center">
                 <img src="http://placehold.it/350x150" alt="placeholder" class="img-responsive" id="logo">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
+                <h1>POSUŇME SE SPOLU VPŘED</h1>
+                <h2>Podpořte konkrétní projekty ve vaší škole</h2>
+                <button class="btn btn-success">Chci přispět škole</button>
             </div>
         </section>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+        <form action="#">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="gymnázium arabská...">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <img src="http://placehold.it/350x150" alt="">
+            <p>Vybavení nové učebny</p>
+            <p>Gymnázium Arabská</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, vel, reiciendis dolorem earum
+                maiores excepturi!
+                <button class="btn btn-block btn-success">O projektu</button>
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <img src="http://placehold.it/350x150" alt="">
+            <p>Vybavení nové učebny</p>
+            <p>Gymnázium Arabská</p>
+            <p>Consectetur, cupiditate, ea, optio animi repellendus facilis illum dolore quibusdam voluptatem voluptates
+                sapiente harum est.
+                <button class="btn btn-block btn-success">O projektu</button>
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <img src="http://placehold.it/350x150" alt="">
+            <p>Vybavení nové učebny</p>
+            <p>Gymnázium Arabská</p>
+            <p>Quo, accusamus, eaque. Quod, tempora accusantium consequuntur tempore illum totam obcaecati debitis error
+                laboriosam neque.
+                <button class="btn btn-block btn-success">O projektu</button>
+            </p>
+        </div>
     </div>
 </div>

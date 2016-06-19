@@ -9,6 +9,7 @@
     <!-- stylesheets -->
     <link rel="stylesheet" href="{$basePath}/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{$basePath}/node_modules/bootstrap/dist/css/bootstrap.min.css.map">
+    {*<link rel="stylesheet" href="{$basePath}/node_modules/font-awesome/font-awesome.min.css">*}
     <link rel="stylesheet" href="{$basePath}/css/app.min.css">
 </head>
 
@@ -16,7 +17,30 @@
 <div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
 
 <div class="container-fluid">
+
+    <!-- Navbar -->
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav pull-right">
+                <li>
+                    <a href="#">O projektu</a>
+                </li>
+                <li>
+                    <a href="#">Pro školy</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     {include content}
+
+    <footer>
+        <div class="col-sm-12 text-center">
+            <span>Lorem ipsum dolor.</span>
+            <a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
+            <span>Lorem ipsum.</span>
+        </div>
+    </footer>
 </div>
 
 	{control subscriptionForm}
