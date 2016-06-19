@@ -5,6 +5,7 @@ parameters:
 	dbal:
 		driver: mysqli
 		connectionTz: '+01:00'
+	senderEmail: 'Nakopni Školu <info@nakopniskolu.cz>'
 
 #php:
 #	date.timezone: UTC
@@ -25,6 +26,7 @@ services:
 	authenticator: App\Services\Authenticator
 
 	- App\FrontModule\Forms\SubscriptionFormFactory
+	- App\FrontModule\Forms\ReservationFormFactory(%senderEmail%)
 
 
 extensions:
