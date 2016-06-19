@@ -6,40 +6,39 @@
     <div class="col-sm-12">
         <section>
             <div class="row text-center">
-                <div id="logo">
-                    <span>NAKOPNI</span>
-                    <br>
-                    <span>ŠKOLU</span>
-                </div>
+                <img src="img/logo-green.png" alt="Logo of Nakopni školu" id="logo">
                 <h1>POSUŇME SE SPOLU VPŘED</h1>
                 <h2>Podpořte konkrétní projekty ve vaší škole</h2>
-                <button class="btn btn-success">Chci přispět škole</button>
+                <a href="#content" class="btn btn-lg btn-support">Chci přispět škole</a>
             </div>
         </section>
     </div>
 </div>
-<div class="row">
-    <div class="col-sm-4 col-sm-offset-4">
-        <form action="#">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="gymnázium arabská...">
-            </div>
-        </form>
-    </div>
-</div>
-
-<div class="container">
+<section id="content">
     <div class="row">
-
-        {foreach $projects as $project}
-            <div class="col-sm-4">
-                <img src="http://placehold.it/350x150" alt="">
-                <p>{$project->name}</p>
-                <p>{$project->school->name}</p>
-                <p>{$project->description|noescape}</p>
-                <a n:href="Project:detail $project->id" class="btn btn-block btn-success">O projektu</a>
-            </div>
-        {/foreach}
-
+        <div class="col-sm-4 col-sm-offset-4">
+            <form id="filter" action="#">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="gymnázium arabská...">
+                </div>
+            </form>
+        </div>
     </div>
-</div>
+
+    <div class="container">
+        <div class="row">
+
+            {foreach $projects as $project}
+                <div class="col-sm-4">
+                    <img src="http://placehold.it/350x150" alt="">
+                    <p>{$project->name}</p>
+                    <p>{$project->school->name}</p>
+                    <p>{$project->description|noescape}</p>
+                    <a n:href="Project:detail $project->id" class="btn btn-block btn-success">O projektu</a>
+                </div>
+            {/foreach}
+
+        </div>
+    </div>
+
+</section>

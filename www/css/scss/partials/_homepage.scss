@@ -1,0 +1,71 @@
+// Header section
+.navbar {
+  background: none;
+  border: none;
+  margin-bottom: 0;
+
+  .navbar-nav {
+    li {
+      a, a:hover {
+        color: #ffffff;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.header {
+  background: url('../img/classroom.jpg') no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffffff;
+  height: 80vh;
+  margin-top: -50px;
+  padding-top: 5%;
+
+  h1 {
+    font-size: 7rem;
+    font-weight: bolder;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+
+  #logo {
+    width: 12%;
+    margin-bottom: 40px;
+  }
+}
+
+.btn {
+  &.btn-support {
+    border-radius: 0;
+    background-color: $primary-color;
+    color: #000;
+    margin-top: 5%;
+
+  }
+}
+
+#content {
+  padding-top: 90px;
+
+  #filter {
+
+    margin-bottom: 70px;
+
+    input {
+      border-width: 0 0 1px 0;
+      border-color: #8c8c8c;
+      border-radius: 0;
+      border-style: solid;
+      box-shadow: none;
+      color: #000;
+      font-size: 2rem;
+      padding: 0 15px 5px 15px;
+    }
+  }
+}
