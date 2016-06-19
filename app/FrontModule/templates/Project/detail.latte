@@ -1,10 +1,35 @@
 {block title}{$project->name}{/block}
 
 {block content}
-    <h1>{include #title}</h1>
-    {$project->name}
-    {$project->description|noescape}
-    {$project->school->name}
 
-    {control reservationForm}
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h1>{include #title}</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="http://placehold.it/500x500" alt="...">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{$project->school->name}</h4>
+                        <p>{$project->school->email}</p>
+                        <p>{$project->school->address}, {$project->school->city}, {$project->school->zip}</p>
+                        {control reservationForm}
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                {$project->description|noescape}
+            </div>
+        </div>
+    </div>
 {/block}
