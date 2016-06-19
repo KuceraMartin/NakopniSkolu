@@ -1,5 +1,8 @@
 {block content}
 
-{foreach $projects as $project}
-	{$project->name}
-{/foreach}
+<table>
+<tr n:foreach="$projects as $project">
+	<td>{$project->name}</td>
+	<td><a n:href="Project:edit id => $project->id">Upravit</a></td>
+</tr>
+</table>
