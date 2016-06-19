@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "bootstrap3-wysihtml5-commonjs": "0.0.4",
     "font-awesome": "^4.6.3",
     "jquery": "2.2.4"
   }
