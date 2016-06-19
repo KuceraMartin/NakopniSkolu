@@ -10,6 +10,12 @@
 <body>
 	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
 
+	{if $user->isLoggedIn()}
+	<a n:href="Dashboard:">Seznam projektů</a>
+	<a n:href="Project:create">Nový projekt</a>
+	<a n:href="Sign:out">Odhlásit</a>
+	{/if}
+
 	{include content}
 
 	{block scripts}
