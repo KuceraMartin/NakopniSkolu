@@ -9,7 +9,6 @@
     <!-- stylesheets -->
     <link rel="stylesheet" href="{$basePath}/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{$basePath}/node_modules/bootstrap/dist/css/bootstrap.min.css.map">
-    {*<link rel="stylesheet" href="{$basePath}/node_modules/font-awesome/font-awesome.min.css">*}
     <link rel="stylesheet" href="{$basePath}/css/app.min.css">
 </head>
 
@@ -21,9 +20,12 @@
     <!-- Navbar -->
     <div class="row">
         <nav class="navbar navbar-default">
+            {if $presenter->getName() != 'Front:Homepage'}
+                <div class="navbar-brand"><a n:href="Homepage:default">Nakopni školu</a></div>
+            {/if}
             <ul class="nav navbar-nav pull-right">
                 <li>
-                    <a href="#">O projektu</a>
+                    <a n:href="About:default">O projektu</a>
                 </li>
                 <li>
                     <a href="#">Pro školy</a>
