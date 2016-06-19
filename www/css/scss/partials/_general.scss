@@ -11,3 +11,36 @@ html {
 footer {
   margin-top: 50px;
 }
+
+// Header section
+.navbar {
+  background: none;
+  border: none;
+  margin-bottom: 0;
+
+  .navbar-nav {
+    li {
+      a {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.header {
+  background: url('../img/classroom.jpg') no-repeat;
+  background-size: cover;
+  background-position: 0 -150px;
+  color: #ffffff;
+  height: 70vh;
+  margin-top: -50px;
+  padding-top: 10%;
+
+  h1 {
+    font-size: 8rem;
+    font-weight: bolder;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+}
