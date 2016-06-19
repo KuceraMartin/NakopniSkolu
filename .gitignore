@@ -1,3 +1,5 @@
 app/config/local.neon
 .idea/
 www/node_modules/
+www/css/app.css
+www/css/app.min.css
