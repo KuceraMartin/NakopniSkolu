@@ -12,4 +12,9 @@ namespace App\Model;
 class Project extends Entity
 {
 
+    public function isFunded()
+    {
+        return $this->reservation !== NULL;
+    }
+
 }
