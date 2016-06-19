@@ -1,16 +1,18 @@
 // Header section
-.navbar {
-  background: none;
-  border: none;
-  margin-bottom: 0;
+.fe {
+  .navbar {
+    background: none;
+    border: none;
+    margin-bottom: 0;
 
-  .navbar-nav {
-    li {
-      a, a:hover {
-        color: #ffffff;
+    .navbar-nav {
+      li {
+        a, a:hover {
+          color: #ffffff;
 
-        &:hover {
-          text-decoration: underline;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }

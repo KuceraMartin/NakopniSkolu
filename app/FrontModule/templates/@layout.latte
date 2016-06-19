@@ -18,7 +18,7 @@
 <div class="container-fluid">
 
     <!-- Navbar -->
-    <div class="row">
+    <div class="row fe">
         <nav class="navbar navbar-default">
             {if $presenter->getName() != 'Front:Homepage'}
                 <div class="navbar-brand"><a n:href="Homepage:default">Nakopni školu</a></div>
@@ -36,16 +36,21 @@
 
     {include content}
 
-    <footer>
-        <div class="col-sm-12 text-center">
-            <span>Lorem ipsum dolor.</span>
-            <a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-            <span>Lorem ipsum.</span>
-        </div>
-    </footer>
-</div>
 
-{control subscriptionForm}
+    <div class="row">
+        <footer class="footer-fe">
+            <div class="col-sm-12 text-center">
+                <h3>Zajímá vás další vývoj projektu?</h3>
+                <form n:name="subscriptionForm" class="form-inline form-subscription">
+                    <div class="form-group">
+                        <input n:name="email" type="email" class="form-control" placeholder="jon.doe@example.com">
+                        <button n:name="send" type="submit" class="btn btn-success">Ano</button>
+                    </div>
+                </form>
+            </div>
+        </footer>
+    </div>
+</div>
 
 <!-- Scripts -->
 {block scripts}

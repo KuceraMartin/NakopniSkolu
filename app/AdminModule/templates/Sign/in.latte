@@ -1,7 +1,7 @@
 {block content}
 
 <div class="wrapper">
-    <form n:name="signInForm">
+    <form class="form-signin" n:name="signInForm">
         <h2 class="form-signin-heading">Přihlášení</h2>
         <input type="text" class="form-control" n:name="email" placeholder="E-mailová adresa" required="" autofocus="">
         <input type="password" class="form-control" n:name="password"
@@ -12,4 +12,8 @@
     </form>
 </div>
 
-<a n:href="register">Chcete sem přidat Vaši školu?</a>
+<div class="row">
+    <div class="col-sm-12 text-center">
+        <a n:href="register">Chcete sem přidat Vaši školu?</a>
+    </div>
+</div>
