@@ -45,6 +45,7 @@ class ProjectPresenter extends BasePresenter
 
 	public function renderEdit()
 	{
+		$this->template->project = $this->project;
 		$this->setView('create');
 	}
 
@@ -53,7 +54,7 @@ class ProjectPresenter extends BasePresenter
 		$form = new Form;
 
 		$form->addText('name', 'Název projektu')
- 			->setRequired();
+			->setRequired();
 
 		$form->addTextArea('description', 'Popis')
 			->setRequired();
@@ -76,6 +77,18 @@ class ProjectPresenter extends BasePresenter
 		};
 
 		return $form;
+	}
+
+	public function handleRemove()
+	{
+		if ($this->project->isFunded()) {
+			$this->flashMessage('Tento projekt právě někdo podpořil, a tak nemůže být smazán.', 'warning');
+			$this->redirect('this');
+		}
+		$this->projects->remove($this->project);
+		$this->projects->flush();
+		$this->flashMessage('Projekt ' . $this->project->name . ' byl úspěšně odstraněn.', 'success');
+		$this->redirect('Dashboard:default');
 	}
 
 }
