@@ -5,17 +5,25 @@ namespace App\AdminModule\Presenters;
 
 use App\Model\Project;
 use App\Model\ProjectsRepository;
+use App\Services\ImagePathGetter;
 use Nette\Application\BadRequestException;
 use Nette\Application\UI\Form;
+use Nette\Http\FileUpload;
+use Nette\Utils\Image;
 
 class ProjectPresenter extends BasePresenter
 {
+
+	const IMAGE_RESOLUTION = ['width' => 360, 'height' => 180];
 
 	/** @var int @persistent */
 	public $id;
 
 	/** @var ProjectsRepository @inject */
 	public $projects;
+
+	/** @var ImagePathGetter @inject */
+	public $imagePathGetter;
 
 	/** @var Project */
 	private $project;
@@ -46,6 +54,7 @@ class ProjectPresenter extends BasePresenter
 	public function renderEdit()
 	{
 		$this->template->project = $this->project;
+		$this->template->image = $this->imagePathGetter->getPath($this->project);
 		$this->setView('create');
 	}
 
@@ -58,6 +67,10 @@ class ProjectPresenter extends BasePresenter
 
 		$form->addTextArea('description', 'Popis')
 			->setRequired();
+
+		$form->addUpload('image', 'Obrázek')
+			->addCondition(Form::FILLED)
+			->addRule(Form::IMAGE);
 
 		$form->addSubmit('submit');
 
@@ -72,6 +85,17 @@ class ProjectPresenter extends BasePresenter
 			$this->project->description = $values->description;
 			$this->project->school = $this->user->id;
 			$this->projects->persistAndFlush($this->project);
+
+			/** @var FileUpload $imageUpload */
+			$imageUpload = $values->image;
+			if ($imageUpload->isOk()) {
+				$image = $imageUpload->toImage();
+				$image->resize(self::IMAGE_RESOLUTION['width'], self::IMAGE_RESOLUTION['height'], Image::FILL);
+				$left = ($image->width - self::IMAGE_RESOLUTION['width']) / 2;
+				$top = ($image->height - self::IMAGE_RESOLUTION['height']) / 2;
+				$image->crop($left, $top, self::IMAGE_RESOLUTION['width'], self::IMAGE_RESOLUTION['height']);
+				$image->save($this->imagePathGetter->constructPath($this->project));
+			}
 
 			$this->redirect('Dashboard:');
 		};

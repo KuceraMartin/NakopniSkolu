@@ -6,6 +6,9 @@ parameters:
 		driver: mysqli
 		connectionTz: '+01:00'
 
+	projectImagesPath: images/projects
+	blankImagePath: images/blank-project.png
+
 #php:
 #	date.timezone: UTC
 
@@ -26,6 +29,8 @@ services:
 
 	- App\FrontModule\Forms\SubscriptionFormFactory
 	- App\FrontModule\Forms\ReservationFormFactory(%senderEmail%)
+
+	projectPathGetter: App\Services\ImagePathGetter(%wwwDir%, %projectImagesPath%, %blankImagePath%)
 
 
 extensions:

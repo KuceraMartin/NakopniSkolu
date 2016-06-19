@@ -2,6 +2,7 @@
 
 namespace App\FrontModule\Presenters;
 
+use App\Services\ImagePathGetter;
 use Nette;
 use Nette\Application\UI\Form;
 use App\Model\ProjectsRepository;
@@ -23,6 +24,9 @@ class ProjectPresenter extends BasePresenter
      */
     public $reservationFormFactory;
 
+    /** @var ImagePathGetter @inject */
+    public $imagePathGetter;
+
     /**
      * @param $id
      */
@@ -33,6 +37,7 @@ class ProjectPresenter extends BasePresenter
             $this->error('Projekt nebyl nalezen.', 404);
         }
         $this->template->project = $project;
+        $this->template->image = $this->imagePathGetter->getPath($project);
     }
 
     /**

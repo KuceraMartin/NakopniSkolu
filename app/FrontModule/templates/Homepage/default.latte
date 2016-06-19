@@ -30,7 +30,7 @@
 
             {foreach $projects as $project}
                 <div class="col-sm-4">
-                    <img src="http://placehold.it/350x150" alt="">
+                    <img src="{$baseUri}/{$images[$project->id]}" alt="">
                     <p>{$project->name}</p>
                     <p>{$project->school->name}</p>
                     <p>{$project->description|noescape}</p>
