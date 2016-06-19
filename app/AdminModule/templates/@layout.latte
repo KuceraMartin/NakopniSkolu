@@ -10,45 +10,50 @@
     <!-- stylesheets -->
     <link rel="stylesheet" href="{$basePath}/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{$basePath}/node_modules/bootstrap/dist/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="{$basePath}/plugins/bootstrap3-wysiwyghtml5/bootstrap3-wysihtml5.min.css">
     <link rel="stylesheet" href="{$basePath}/css/app.min.css">
 </head>
 
 <body>
-<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
-
 <div class="container-fluid">
 
     <!-- Navbar -->
     {if $presenter->getName() != 'Admin:Sign'}
         <div class="row">
             <nav class="navbar navbar-default">
-                <div class="navbar-brand"><a n:href=":Front:Homepage:default">Nakopni školu</a></div>
-                <ul class="nav navbar-nav pull-right">
-                    <li>
-                        <button class="btn btn-primary"><i class="fa fa-plus"></i>Nový projekt</button>
-                    </li>
-                    <li>
-                        <a href="#">Logout</a>
-                    </li>
-                </ul>
+                <div class="col-xs-12">
+                    <div class="navbar-brand"><a n:href=":Admin:Dashboard:default">Nakopni školu</a></div>
+                    <ul class="nav navbar-nav pull-right">
+                        <li {ifCurrent Dashboard:}class="active"{/ifCurrent}>
+                            <a n:href="Dashboard:">Seznam projektů</a>
+                        </li>
+                        <li {ifCurrent Project:create}class="active"{/ifCurrent}>
+                            <a n:href="Project:create">Nový projekt</a>
+                        </li>
+                        <li>
+                            <a n:href="Sign:out">Odhlásit se</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </div>
     {/if}
 
-	{if $user->isLoggedIn()}
-	<a n:href="Dashboard:">Seznam projektů</a>
-	<a n:href="Project:create">Nový projekt</a>
-	<a n:href="Sign:out">Odhlásit</a>
-	{/if}
-
+    <div class="row">
+        <div class="col-xs-12">
+            <div n:foreach="$flashes as $flash" class="alert alert-{$flash->type} alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                {$flash->message}
+            </div>
+        </div>
+    </div>
 
     {include content}
 
-    <footer class="navbar-fixed-bottom">
+    <footer class="navbar">
         <div class="col-sm-12 text-center">
-            <span>Lorem ipsum dolor.</span>
-            <a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-            <span>Lorem ipsum.</span>
+            <span>Copyright - Pink Fluffy Unicorn</span>
         </div>
     </footer>
 </div>
@@ -58,8 +63,9 @@
     <script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
     <script src="{$basePath}/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="{$basePath}/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{$basePath}/plugins/bootstrap3-wysiwyghtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    <script src="{$basePath}/plugins/bootstrap3-wysiwyghtml5/locales/bootstrap-wysihtml5.cs-CZ.js"></script>
 {/block}
 
 </body>
-
 </html>
