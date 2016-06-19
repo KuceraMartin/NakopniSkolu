@@ -85,6 +85,7 @@ class ReservationFormFactory extends Nette\Object
             $this->reservations->persistAndFlush($reservation);
         } catch (UniqueConstraintViolationException $e) {
             $form->addError('Tento projekt už byl podpořen někým jiným. Omlouváme se.');
+            return;
         }
 
         $this->sendNotificationEmailToFunder($values);
