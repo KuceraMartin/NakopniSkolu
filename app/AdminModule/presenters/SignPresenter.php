@@ -13,6 +13,7 @@ class SignPresenter extends BasePresenter
 	public function actionOut()
 	{
 		$this->user->logout();
+		$this->redirect('in');
 	}
 
 	protected function createComponentSignInForm(): Form
