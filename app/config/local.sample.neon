@@ -4,4 +4,5 @@ parameters:
 		password:
 		dbname:
 
+	senderEmail: 'Nakopni Školu <info@nakopniskolu.cz>'
 
